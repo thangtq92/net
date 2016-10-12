@@ -1,6 +1,9 @@
-﻿namespace Net.Data.Infrastructure
+﻿using System;
+
+namespace Net.Data.Infrastructure
 {
-    public class IDbFactory
+    public interface IDbFactory : IDisposable
     {
+        NetDbContext Init();
     }
 }
