@@ -7,7 +7,7 @@ namespace Net.Data
     {
         public NetDbContext() : base("NetConnection")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = true;
         }
 
         public DbSet<Footer> Footers { get; set; }
@@ -16,11 +16,11 @@ namespace Net.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Post> Posts { get; set; }
-        public DbSet<PostCategory> PostCategorys { get; set; }
+        public DbSet<PostCategory> PostCategories { get; set; }
         public DbSet<PostTag> PostTags { get; set; }
-        public DbSet<Product> Product { get; set; }
-        public DbSet<ProductCategory> ProductCategory { get; set; }
-        public DbSet<ProductTag> ProductTag { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<ProductTag> ProductTags { get; set; }
         public DbSet<Slide> Slides { get; set; }
         public DbSet<SupportOnline> SupportOnlines { get; set; }
         public DbSet<Tag> Tags { get; set; }
